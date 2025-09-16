@@ -80,10 +80,11 @@ submitButton.addEventListener('click', async () => {
             promptText = `Generate a recipe for a dish using the following main ingredients: ${ingredients}.`;
         }
         
-        promptText += `\n\nThe recipe should have the following characteristics (format like a recipe), also include inline css(if you want add some color) in your output so it looks nice, at the very top doents but any plain text on the recipe thing(at the bottom add a note related to the food e.x: (like happy cooking), and then put -Dhir S),(when it says all deatils doent forget the nutritional info):
+        promptText += `\n\nThe recipe should have the following characteristics (format like a recipe), also include inline css(if you want add some color) in your output so it looks nice, at the very top doents but any plain text on the recipe thing(at the bottom add a note related to the food e.x: (like happy cooking), and then put -Dhir S),(when it says all deatils doent forget the nutritional info), warn about allergie info, and if the indredints are unedible put a warning at the top can the recipe so that the unedible ingredients are not used):
         - Servings: ${servings}
         - Details: ${detail}`;
 
+    
         if (useOnly === 'yes') {
             promptText += `\n- The recipe must use ONLY these ingredients. Do not add any others.`;
         }
