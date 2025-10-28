@@ -1,0 +1,220 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f7f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  color: #0056b3;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-left: 100px;
+}
+
+.navbar {
+  padding: 5px;
+  background-color: #007bff;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around; 
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.navbar a {
+  color: white;
+  font-size: 20px; 
+  text-align: center;
+  padding: 17px 0;
+  flex-grow: 1;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  background-color: #0056b3;
+  border-radius: 8px;
+  transform: translateY(-2px);
+}
+
+.navbar a.active {
+  background-color: #0056b3;
+  border-radius: 8px;
+}
+
+.add-link {
+  font-size: 24px;
+  line-height: 1;
+  background: linear-gradient(135deg, #8A2BE2, #007bff);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-section,
+.image-section,
+.input-section {
+  background-color: #fff;
+  border: 1px solid #e1e8ed;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.image-section {
+  align-items: center;
+}
+
+p { 
+  margin-bottom: 1em; 
+}
+
+p#prompt,
+p#prompt2,
+p#detail-prompt,
+p#ingredient-detail {
+  margin: 0;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+/* New Accordion Styles */
+.accordion-item {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 15px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.accordion-item:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-title {
+  display: block;
+  padding: 25px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #333;
+  position: relative;
+}
+
+.accordion-title:hover {
+  background-color: #f9fbfd;
+}
+
+.accordion-title::after {
+  content: '\2304';
+  font-size: 24px;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.accordion-content {
+  max-height: 0;
+  opacity: 0;
+  padding: 0 25px;
+  transition: max-height 0.5s ease, opacity 0.3s ease, padding 0.5s ease;
+}
+
+/* Checkbox hack to control accordion state */
+.accordion-toggle {
+  display: none;
+}
+
+.accordion-toggle:checked ~ .accordion-content {
+  max-height: 200px;
+  opacity: 1;
+  padding: 10px 25px 25px 25px;
+}
+
+.accordion-toggle:checked + .accordion-title::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Form and Output styles */
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+#image-preview {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  display: none; 
+}
+
+input[type="file"] {
+  display: block;
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 16px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#output {
+  background-color: #f9fbfd;
+  border: 1px solid #e1e8ed;
+  padding: 20px;
+  border-radius: 8px;
+  min-height: 100px;
+}
+
+#output p {
+  margin: 0;
+  white-space: pre-wrap;
+}

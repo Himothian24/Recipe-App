@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body class="screen">
+    <main class="background">
+        <h1> Recipe Finder</h1>
+        <p>Search for delicious recipes by ingredients or dish name.</p>
+        
+        <!-- Search Input and Button -->
+        <div>
+            <input type="text" id="recipe-query"
+                placeholder="e.g., spaghetti carbonara, chicken and broccoli, vegan lasagna">
+            <button id="search-button">
+                Find Recipes
+            </button>
+        </div>
+
+        <div id="results-container"></div>
+
+        <div id="message" class="text-center text-gray-500 mt-8">
+            <p>Your culinary journey starts here. Happy cooking!</p>
+        </div>
+        <a href="home.html">Back to Home</a>
+    </main>
+    
+    
+    <script src="search.js" type="module">
+
+    </script>
+</body>
+
+</html>

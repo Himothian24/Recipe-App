@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click-Dish</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 data-aos="fade-up" data-aos-duration="1000">Click-Dish</h1>
+    
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="saved.html">Saved</a>
+        <a href="create.html" class="add-link">+</a>
+        <a href="index.html">Search</a>
+        <a href="profile.html">Profile</a>
+    </div>
+
+    <main>
+        
+        <div class="content-section" data-aos="fade-right" data-aos-delay="200">
+            <h3>About Click-Dish</h3>
+            <p>
+                Welcome to Click-Dish, your AI-powered culinary assistant! This app is designed to make finding, creating, and saving recipes effortless. 
+                <br><br>
+                Search for delicious recipes by ingredients or dish name, with results instantly tailored to your dietary restrictions set in your Profile. 
+                <br><br>
+                Use the + tab to Generate unique recipes from scratch or by uploading a photo of ingredients you have on hand. 
+                <br><br>
+                Dont't forget to visit Saved to keep track of all your favorite finds!
+                <br><br>
+                With Click-Dish you'll no longer be answering, "What's for Dinner?" 
+            </p>
+            <img src="https://via.placeholder.com/600x400.png?text=Placeholder+Image" alt="Generic placeholder image" style="max-width: 100%; height: auto; display: block; margin: 15px auto;">
+        </div>
+
+        <div class="content-section" data-aos="fade-left" data-aos-delay="400">
+            <h3>Our Core Features</h3>
+            <p>
+                AI Recipe Generation Use the latest Gemini models to instantly create new recipes from text or images. 
+                <br><br>
+                Personalized Search Get instant, custom recipe results filtered by your saved dietary restrictions. 
+                <br><br>
+                Save & Organize Keep all your discovered and generated recipes in one easy-to-access Saved section.
+            </p>
+        </div>
+
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="600">
+            <input type="checkbox" id="bottom-accordion" class="accordion-toggle">
+            <label for="bottom-accordion" class="accordion-title">Learn more about the Search feature</label>
+            <div class="accordion-content">
+                <p>The Search feature uses the Gemini API to find 4 recipes based on your query, applying your saved Dietary Restrictions automatically for a curated result list.</p>
+                <a href="index.html">Go to Search →</a>
+            </div>
+        </div>
+
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="600">
+            <input type="checkbox" id="bottom-accordion-2" class="accordion-toggle">
+            <label for="bottom-accordion-2" class="accordion-title">Learn more about Recipe Generation (+)</label>
+            <div class="accordion-content">
+                <p>The Create (+) feature lets you input ingredients, serving sizes, and details, or even upload an image, to have a brand-new, tailored recipe generated instantly.</p>
+                <a href="create.html">Go to Create →</a>
+            </div>
+        </div>
+
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="600">
+            <input type="checkbox" id="bottom-accordion-3" class="accordion-toggle">
+            <label for="bottom-accordion-3" class="accordion-title">Setting up your Profile</label>
+            <div class="accordion-content">
+                <p>The Profile page is where you can enter and save your Dietary Restrictions (e.g., Vegan, Gluten-Free). This is crucial for making the Search feature work for you!</p>
+                <a href="profile.html">Go to Profile →</a>
+            </div>
+        </div>
+        
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true
+      });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Generator</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Generate Recipes</h1>
+
+    <div class="image-section">
+        <label for="food-pic">Upload an image of your food:</label>
+        <input type="file" accept="image/*" id="food-pic">
+        <img id="image-preview" alt="Image preview">
+    </div>
+    
+    <div class="input-section">
+        <p id="prompt">Pick your Main Ingredients or List all</p>
+        <input type="text" id="food-input-field" placeholder="e.g., tofu, chicken, cake">
+
+        <p id="prompt2">Enter the number of people eating</p>
+        <input type="number" id="serving-num" placeholder="e.g., 1, 2, 3">
+
+        <p id="detail-prompt">What detail do you want to see?</p>
+        <select id="recipe-detail-selector">
+            <option value="All Details">All Details</option>
+            <option value="Ingredients">Ingredients</option>
+            <option value="Nutritional Info">Nutritional Info</option>
+            <option value="Instructions">Instructions</option>
+        </select>
+
+        <p id="ingredient-detail">Do you only want to use these Ingredients?</p>
+        <select id="person_input_num">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        
+        <button id="submit-recipe-button">Get Recipe</button>
+    </div>
+
+    <div id="output">
+        <p>Your recipe will appear here.</p>
+    </div>
+    <a href="home.html">Back to Home</a>
+    
+    
+    <script src="main.js" type="module">
+       
+    </script>
+</body>
+</html>
